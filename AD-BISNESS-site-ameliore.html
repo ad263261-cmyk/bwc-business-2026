@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AD-BISNESS à Bamako : réparation de téléphones, flashage, réglages et accessoires. Demandez un devis sur WhatsApp.">
+  <meta name="theme-color" content="#071525">
+  <meta property="og:title" content="AD-BISNESS | Atelier mobile & boutique">
+  <meta property="og:description" content="Réparation, flashage, réglages et accessoires mobiles à Bamako.">
+  <meta property="og:type" content="website">
+  <title>AD-BISNESS — Atelier mobile & boutique</title>
+  <style>
+    :root {
+      --navy: #10243a;
+      --blue: #1769aa;
+      --cyan: #20c7b5;
+      --gold: #ffbd59;
+      --ink: #1e293b;
+      --muted: #64748b;
+      --paper: #f4f7fb;
+      --white: #ffffff;
+      --line: #e2e8f0;
+      --shadow: 0 12px 32px rgba(16, 36, 58, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    :root { --navy:#071525; --blue:#1467d8; --cyan:#35e0c1; --gold:#ffca6a; --ink:#152338; --muted:#65758b; --paper:#f5f8fc; --white:#fff; --line:#e1e8f0; --shadow:0 16px 40px rgba(7,21,37,.10); }
+    body { letter-spacing: .01em; }
+    .topbar { background: #0a1726; color: #e8f1fb; padding: 8px 5%; font-size: .88rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    header { background: var(--white); position: sticky; top: 0; z-index: 20; box-shadow: 0 3px 16px rgba(0,0,0,.06); }
+    .nav { max-width: 1180px; margin: auto; padding: 13px 22px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 900; letter-spacing: .5px; color: var(--navy); }
+    .logo { width: 46px; height: 46px; border-radius: 14px; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: white; display: grid; place-items: center; font-weight: 950; font-size: 1.05rem; box-shadow: 0 7px 16px rgba(23,105,170,.22); }
+    .brand small { display: block; font-size: .72rem; color: var(--muted); font-weight: 700; letter-spacing: 1.2px; }
+    .navlinks { display: flex; gap: 22px; align-items: center; font-size: .95rem; font-weight: 700; }
+    .navlinks a:hover { color: var(--blue); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 12px; padding: 12px 17px; background: var(--cyan); color: #062b2b; font-weight: 850; cursor: pointer; transition: transform .18s, filter .18s; }
+    .btn:hover { transform: translateY(-2px); filter: brightness(.97); }
+    .btn-blue { background: var(--blue); color: white; }
+    .btn-outline { background: white; border: 1px solid var(--line); color: var(--navy); }
+    .navlinks a:not(.btn) { padding: 8px 0; }
+    .navlinks a:not(.btn):hover { color: var(--blue); }
+    .menu-toggle { display:none; background:#eef4fb; border:0; border-radius:10px; padding:10px 12px; font-size:1.1rem; color:var(--navy); }
+    .hero { background: radial-gradient(circle at 80% 20%, rgba(32,199,181,.23), transparent 30%), linear-gradient(120deg, #0b1b2d, #123b5d); color: white; overflow: hidden; }
+    .hero-inner { max-width: 1180px; margin: auto; padding: 72px 22px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 42px; }
+    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; font-weight: 900; }
+    h1 { font-size: clamp(2.35rem, 5vw, 4.2rem); line-height: 1.08; letter-spacing: -1.7px; margin: 13px 0 18px; }
+    .hero p { color: #d6e5f3; max-width: 600px; font-size: 1.08rem; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+    .hero-photo { min-height: 320px; border-radius: 28px; overflow: hidden; position: relative; box-shadow: 0 25px 60px rgba(0,0,0,.3); border: 1px solid rgba(255,255,255,.15); }
+    .hero-photo img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; display: block; }
+    .photo-label { position: absolute; left: 16px; right: 16px; bottom: 16px; padding: 13px 16px; border-radius: 16px; background: rgba(7,22,37,.85); backdrop-filter: blur(8px); font-weight: 800; }
+    .hero .eyebrow { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.13); padding:8px 12px; border-radius:999px; }
+    .hero h1 { max-width:720px; }
+    .hero p { line-height:1.8; }
+    .hero-photo:after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(7,21,37,.20),transparent 60%); pointer-events:none; }
+    .trust { max-width: 1180px; margin: -22px auto 0; padding: 0 22px; position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .trust-item { background: white; border-radius: 16px; padding: 19px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 13px; }
+    .trust-icon { width: 43px; height: 43px; border-radius: 12px; background: #e1faf6; display: grid; place-items: center; font-size: 1.3rem; }
+    .trust-item strong { display: block; color: var(--navy); }
+    .trust-item span { color: var(--muted); font-size: .88rem; }
+    section { max-width: 1180px; margin: auto; padding: 72px 22px; }
+    .section-head { text-align: center; max-width: 680px; margin: 0 auto 34px; }
+    .section-head .eyebrow { color: var(--blue); }
+    h2 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); color: var(--navy); line-height: 1.15; margin: 10px 0 12px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .toolbar { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; margin:0 0 22px; }
+    .searchbox { flex:1; min-width:220px; display:flex; gap:10px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:14px; padding:0 14px; box-shadow:0 4px 14px rgba(16,36,58,.03); }
+    .searchbox input { width:100%; border:0; outline:0; background:transparent; padding:14px 0; font:inherit; color:var(--ink); }
+    .filter-pills { display:flex; gap:8px; flex-wrap:wrap; }
+    .filter-pills button { border:1px solid var(--line); border-radius:999px; padding:9px 13px; background:white; color:var(--ink); font:inherit; font-size:.88rem; font-weight:750; cursor:pointer; }
+    .filter-pills button.active { background:var(--navy); color:#fff; border-color:var(--navy); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card { background: white; border: 1px solid #edf1f6; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 24px rgba(16,36,58,.05); transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .card img { width: 100%; height: 205px; object-fit: cover; display: block; background: #e2e8f0; }
+    .card-body { padding: 20px; }
+    .tag { display: inline-block; color: #087f74; background: #e3faf6; font-size: .75rem; font-weight: 900; border-radius: 999px; padding: 5px 10px; margin-bottom: 9px; }
+    h3 { margin: 0 0 9px; color: var(--navy); font-size: 1.2rem; }
+    .card p { color: var(--muted); margin: 0 0 14px; font-size: .93rem; }
+    .price-list { display: grid; gap: 10px; margin: 16px 0 18px; }
+    .price-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding-bottom: 9px; border-bottom: 1px dashed var(--line); font-size: .92rem; }
+    .price-row span { color: #475569; }
+    .price-row strong { color: var(--blue); white-space: nowrap; }
+    .card .btn { width: 100%; }
+    .card[hidden] { display:none; }
+    .card .card-body { display:flex; flex-direction:column; height:calc(100% - 205px); }
+    .card .price-list { margin-top:auto; }
+    .product-label { position:absolute; top:14px; left:14px; background:#fff; color:var(--navy); padding:6px 10px; border-radius:999px; font-size:.76rem; font-weight:900; box-shadow:0 4px 12px rgba(0,0,0,.12); }
+    .card-image { position:relative; }
+    .notice { background: #fff7e8; border: 1px solid #ffe3ad; border-radius: 14px; color: #7a4b00; padding: 14px 16px; font-size: .9rem; margin-top: 24px; }
+    .banner { background: linear-gradient(110deg, #0d2b45, #1769aa); color: white; border-radius: 24px; padding: 36px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .banner h2 { color: white; margin-top: 0; }
+    .banner p { color: #d8e9f7; margin-bottom: 0; }
+    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .why-card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px; }
+    .why-card .trust-icon { margin-bottom:14px; }
+    .faq-list { max-width:850px; margin:auto; display:grid; gap:10px; }
+    .faq-list details { background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 18px; }
+    .faq-list summary { cursor:pointer; color:var(--navy); font-weight:850; }
+    .faq-list details p { color:var(--muted); margin-bottom:0; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 24px; }
+    .contact-panel, .contact-details { background: white; border-radius: 20px; padding: 26px; box-shadow: 0 8px 24px rgba(16,36,58,.05); }
+    .contact-details { display: grid; gap: 15px; }
+    .contact-line { display: flex; gap: 13px; align-items: flex-start; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .contact-line:last-child { border-bottom: 0; padding-bottom: 0; }
+    .contact-line .trust-icon { flex-shrink: 0; }
+    .contact-line strong { display: block; color: var(--navy); }
+    .contact-line a { color: var(--blue); overflow-wrap: anywhere; }
+    footer { background: #0a1726; color: #c8d5e2; padding: 28px 22px; text-align: center; font-size: .9rem; }
+    footer strong { color: white; }
+    .footer-links { display:flex; justify-content:center; gap:18px; flex-wrap:wrap; margin:12px 0; }
+    .whatsapp-float { position: fixed; right: 18px; bottom: 18px; z-index: 30; background: #25d366; color: #063b1b; border-radius: 999px; padding: 14px 18px; box-shadow: 0 8px 24px rgba(0,0,0,.2); font-weight: 900; }
+    @media (max-width: 800px) {
+      .nav { padding: 11px 16px; }
+      .navlinks { gap: 12px; font-size: .85rem; }
+      .navlinks a:nth-child(2) { display: none; }
+      .nav .btn { padding: 10px 12px; }
+      .hero-inner { grid-template-columns: 1fr; padding: 50px 18px 42px; gap: 28px; }
+      .hero-photo, .hero-photo img { min-height: 240px; }
+      .trust { grid-template-columns: 1fr; margin-top: 16px; }
+      section { padding: 55px 18px; }
+      .cards { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns:1fr; }
+      .menu-toggle { display:block; }
+      .nav { position:relative; flex-wrap:wrap; }
+      .navlinks { display:none; width:100%; flex-direction:column; align-items:stretch; padding:12px 0 4px; }
+      .navlinks.open { display:flex; }
+      .navlinks a { padding:10px 8px !important; }
+      .navlinks a:first-child, .navlinks a:nth-child(2) { display:block; }
+      .navlinks .btn { width:100%; }
+      .card img { height: 220px; }
+      .banner { padding: 26px; flex-direction: column; align-items: flex-start; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 420px) {
+      .brand small { letter-spacing: .5px; }
+      .navlinks a:first-child { display: none; }
+      .logo { width: 40px; height: 40px; }
+      .topbar { font-size: .78rem; }
+      .hero-actions .btn { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; } }
+    .section-tint { background:#edf3fa; max-width:none; }
+    .section-tint > .inner { max-width:1180px; margin:auto; padding:65px 22px; }
+    .section-tint h2 { margin-top:8px; }
+    .status-line { color:var(--muted); font-size:.9rem; margin:12px 0 0; }
+    .mini-note { font-size:.82rem; color:var(--muted); margin-top:10px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>📍 Bamako, Mali</span>
+    <span>📞 +223 75 88 04 89 · Service & accessoires mobiles</span>
+  </div>
+
+  <header>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="AD-BISNESS accueil">
+        <span class="logo">AD</span>
+        <span>AD-BISNESS<small>RÉPARATION • FLASHAGE • ACCESSOIRES</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <div class="navlinks" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#accessoires">Accessoires</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="https://wa.me/22375880489?text=Bonjour%20AD-BISNESS%2C%20je%20souhaite%20un%20renseignement." target="_blank" rel="noopener">WhatsApp ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="accueil">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">✦ Votre atelier mobile à Bamako</div>
+          <h1>La technologie entre de <span style="color:var(--cyan)">bonnes mains.</span></h1>
+          <p>Votre téléphone a un problème ou vous cherchez un accessoire ? AD-BISNESS vous accompagne avec des services mobiles, des prix indicatifs clairs et un contact direct sur WhatsApp.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#services">Voir les tarifs ↓</a>
+            <a class="btn btn-outline" href="https://wa.me/22375880489?text=Bonjour%20AD-BISNESS%2C%20je%20souhaite%20faire%20r%C3%A9parer%20mon%20t%C3%A9l%C3%A9phone." target="_blank" rel="noopener">Demander un service</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1100&q=85" alt="Technicien au travail dans un atelier" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1100&q=85'">
+          <div class="photo-label">🛠️ Réparation & assistance mobile</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust" aria-label="Nos engagements">
+      <div class="trust-item"><div class="trust-icon">🛠️</div><div><strong>Services mobiles</strong><span>Diagnostic et dépannage</span></div></div>
+      <div class="trust-item"><div class="trust-icon">💰</div><div><strong>Tarifs visibles</strong><span>Prix indicatifs en FCFA</span></div></div>
+      <div class="trust-item"><div class="trust-icon">💬</div><div><strong>Contact facile</strong><span>Commande par WhatsApp</span></div></div>
+    </div>
+
+    <section id="services">
+      <div class="section-head">
+        <div class="eyebrow">Nos prestations</div>
+        <h2>Tout pour votre téléphone, au même endroit</h2>
+        <p>Recherchez un service, comparez les prix indicatifs puis demandez votre devis en quelques secondes.</p>
+      </div>
+      <div class="toolbar">
+        <label class="searchbox"><span>🔎</span><input id="serviceSearch" type="search" placeholder="Rechercher : écran, chargeur, flashage…" aria-label="Rechercher un service ou accessoire"></label>
+        <div class="filter-pills" aria-label="Filtrer les services">
+          <button class="active" data-filter="all" type="button">Tout voir</button>
+          <button data-filter="repair" type="button">Réparation</button>
+          <button data-filter="software" type="button">Logiciel</button>
+          <button data-filter="accessory" type="button">Accessoires</button>
+        </div>
+      </div>
+      <div class="cards" id="serviceCards">
+        <article class="card" data-category="repair" data-search="réparation écran batterie connecteur charge diagnostic téléphone panne">
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=900&q=85" alt="Réparation d'un appareil électronique" loading="lazy"><span class="product-label">🔧 Atelier</span></div>
+          <div class="card-body">
+            <span class="tag">RÉPARATION</span>
+            <h3>Réparation de téléphones</h3>
+            <p>Diagnostic et réparation selon la panne et le modèle de l'appareil.</p>
+            <div class="price-list">
+              <div class="price-row"><span>Diagnostic</span><strong>2 000 FCFA</strong></div>
+              <div class="price-row"><span>Écran (main-d'œuvre/pièce selon modèle)</span><strong>Dès 10 000 FCFA</strong></div>
+              <div class="price-row"><span>Batterie</span><strong>Dès 5 000 FCFA</strong></div>
+              <div class="price-row"><span>Connecteur de charge</span><strong>Dès 5 000 FCFA</strong></div>
+            </div>
+            <a class="btn btn-blue" href="https://wa.me/22375880489?text=Bonjour%20AD-BISNESS%2C%20je%20veux%20un%20devis%20pour%20une%20r%C3%A9paration." target="_blank" rel="noopener">Demander un devis ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-category="software" data-search="flashage logiciel android configuration mise à jour dépannage réglage">
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85" alt="Ordinateur utilisé pour une intervention logicielle" loading="lazy"><span class="product-label">⚙️ Logiciel</span></div>
+          <div class="card-body">
+            <span class="tag">LOGICIEL</span>
+            <h3>Flashage & réglages</h3>
+            <p>Configuration, mises à jour et dépannage logiciel sur appareils autorisés.</p>
+            <div class="price-list">
+              <div class="price-row"><span>Flashage logiciel</span><strong>5 000 FCFA</strong></div>
+              <div class="price-row"><span>Configuration Android</span><strong>2 000 FCFA</strong></div>
+              <div class="price-row"><span>Mise à jour système</span><strong>2 000 FCFA</strong></div>
+              <div class="price-row"><span>Dépannage logiciel</span><strong>Dès 5 000 FCFA</strong></div>
+            </div>
+            <a class="btn btn-blue" href="https://wa.me/22375880489?text=Bonjour%20AD-BISNESS%2C%20je%20souhaite%20un%20service%20de%20flashage%20ou%20de%20r%C3%A9glage." target="_blank" rel="noopener">Choisir ce service ↗</a>
+          </div>
+        </article>
+
+        <article class="card" id="accessoires" data-category="accessory" data-search="accessoires câble usb chargeur écouteurs coque batterie externe écouteur">
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=85" alt="Accessoires et câbles pour appareils mobiles" loading="lazy"><span class="product-label">🎧 Boutique</span></div>
+          <div class="card-body">
+            <span class="tag">BOUTIQUE</span>
+            <h3>Accessoires téléphones</h3>
+            <p>Accessoires du quotidien. La disponibilité dépend du modèle et du stock.</p>
+            <div class="price-list">
+              <div class="price-row"><span>Câble USB</span><strong>1 000 FCFA</strong></div>
+              <div class="price-row"><span>Chargeur</span><strong>3 000 FCFA</strong></div>
+              <div class="price-row"><span>Écouteurs</span><strong>2 000 FCFA</strong></div>
+              <div class="price-row"><span>Coque de téléphone</span><strong>1 500 FCFA</strong></div>
+              <div class="price-row"><span>Batterie externe</span><strong>8 000 FCFA</strong></div>
+            </div>
+            <a class="btn btn-blue" href="https://wa.me/22375880489?text=Bonjour%20AD-BISNESS%2C%20je%20souhaite%20commander%20un%20accessoire." target="_blank" rel="noopener">Commander un accessoire ↗</a>
+          </div>
+        </article>
+      </div>
+      <div class="notice">ℹ️ <strong>À noter :</strong> les tarifs affichés sont indicatifs. Le prix final peut varier selon la marque, le modèle, la qualité de la pièce et la panne. Contactez AD-BISNESS pour confirmer le prix et la disponibilité avant tout déplacement.</div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="banner">
+        <div>
+          <h2>Besoin d'un prix exact ?</h2>
+          <p>Envoyez-nous la marque, le modèle et une description de la panne sur WhatsApp.</p>
+        </div>
+        <a class="btn" href="https://wa.me/22375880489?text=Bonjour%20AD-BISNESS%2C%20mon%20t%C3%A9l%C3%A9phone%20est%20un%20...%20et%20mon%20probl%C3%A8me%20est%20..." target="_blank" rel="noopener">Obtenir mon devis ↗</a>
+      </div>
+    </section>
+
+    <section class="section-tint" id="pourquoi">
+      <div class="inner">
+        <div class="section-head">
+          <div class="eyebrow">L'expérience AD-BISNESS</div>
+          <h2>Simple, clair et pratique</h2>
+          <p>Nous facilitons votre demande, de la première question jusqu'au choix du service.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card"><div class="trust-icon">💬</div><h3>Devis par WhatsApp</h3><p>Expliquez la panne ou envoyez le nom du produit pour recevoir les informations utiles.</p></article>
+          <article class="why-card"><div class="trust-icon">🏷️</div><h3>Prix indicatifs visibles</h3><p>Consultez les tarifs de départ. Le prix exact est confirmé selon le modèle et la disponibilité.</p></article>
+          <article class="why-card"><div class="trust-icon">📱</div><h3>Services mobiles</h3><p>Réparation, configuration, flashage et accessoires pour vos besoins du quotidien.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="section-head">
+        <div class="eyebrow">Questions fréquentes</div>
+        <h2>Avant de commander</h2>
+        <p>Quelques réponses pour vous aider à préparer votre demande.</p>
+      </div>
+      <div class="faq-list">
+        <details><summary>Le prix affiché est-il définitif ?</summary><p>Non. Il est indicatif. Envoyez la marque, le modèle et le problème pour confirmer le tarif avant toute intervention.</p></details>
+        <details><summary>Comment savoir si un accessoire est disponible ?</summary><p>Contactez-nous sur WhatsApp en précisant le modèle de votre téléphone et l'accessoire recherché.</p></details>
+        <details><summary>Que dois-je envoyer pour demander une réparation ?</summary><p>Indiquez la marque, le modèle, les symptômes et, si possible, une photo du problème. Ne partagez jamais vos mots de passe ni vos codes de vérification.</p></details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <div class="eyebrow">Restons en contact</div>
+        <h2>Contact AD-BISNESS</h2>
+        <p>Une question sur un produit ou une réparation ? Nous sommes à votre écoute.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-panel">
+          <h3>Pourquoi nous contacter ?</h3>
+          <p style="color:var(--muted)">Pour confirmer un tarif, vérifier la disponibilité d'un accessoire ou demander un devis de réparation, écrivez-nous avant de commander.</p>
+          <a class="btn" href="https://wa.me/22375880489?text=Bonjour%20AD-BISNESS%2C%20je%20vous%20contacte%20depuis%20votre%20site." target="_blank" rel="noopener">Écrire sur WhatsApp ↗</a>
+        </div>
+        <div class="contact-details">
+          <div class="contact-line"><div class="trust-icon">📱</div><div><strong>Téléphone / WhatsApp</strong><a href="https://wa.me/22375880489" target="_blank" rel="noopener">+223 75 88 04 89</a></div></div>
+          <div class="contact-line"><div class="trust-icon">✉️</div><div><strong>E-mail</strong><a href="mailto:ad263261@gmail.com">ad263261@gmail.com</a></div></div>
+          <div class="contact-line"><div class="trust-icon">📍</div><div><strong>Zone de service</strong><span>Bamako, Mali — adresse exacte à préciser si nécessaire.</span></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>AD-BISNESS</strong> · Réparation, flashage, réglages & accessoires
+    <div class="footer-links"><a href="#accueil">Accueil</a><a href="#services">Services & tarifs</a><a href="#faq">Questions fréquentes</a><a href="#contact">Contact</a></div>
+    <span>© <span id="year"></span> AD-BISNESS. Tous droits réservés.</span>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/22375880489?text=Bonjour%20AD-BISNESS%2C%20je%20viens%20de%20votre%20site." target="_blank" rel="noopener" aria-label="Contacter AD-BISNESS sur WhatsApp">WhatsApp 💬</a>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile accessible
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const opened = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(opened));
+      menuToggle.textContent = opened ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }));
+
+    // Recherche et filtres des cartes
+    const searchInput = document.getElementById('serviceSearch');
+    const filterButtons = [...document.querySelectorAll('[data-filter]')];
+    const serviceCards = [...document.querySelectorAll('#serviceCards .card')];
+    let currentFilter = 'all';
+    function filterServices() {
+      const term = searchInput.value.trim().toLocaleLowerCase('fr');
+      let count = 0;
+      serviceCards.forEach(card => {
+        const matchesCategory = currentFilter === 'all' || card.dataset.category === currentFilter;
+        const matchesText = (card.innerText + ' ' + card.dataset.search).toLocaleLowerCase('fr').includes(term);
+        card.hidden = !(matchesCategory && matchesText);
+        if (!card.hidden) count++;
+      });
+      let status = document.getElementById('searchStatus');
+      if (!status) {
+        status = document.createElement('p');
+        status.id = 'searchStatus';
+        status.className = 'status-line';
+        document.getElementById('serviceCards').after(status);
+      }
+      status.textContent = count + (count > 1 ? ' catégories affichées.' : ' catégorie affichée.');
+    }
+    searchInput.addEventListener('input', filterServices);
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      currentFilter = button.dataset.filter;
+      filterButtons.forEach(item => item.classList.toggle('active', item === button));
+      filterServices();
+    }));
+  </script>
+</body>
+</html>
